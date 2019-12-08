@@ -32,7 +32,6 @@ public class SMSReceiver extends BroadcastReceiver {
             URL url = null;
             try {
                 url = new URL(SPELL_CHECK_URL + "metrics"
-                        +"?msg="+msgs[i].getMessageBody()
                 );
             } catch (MalformedURLException e) {
                 e.printStackTrace();
