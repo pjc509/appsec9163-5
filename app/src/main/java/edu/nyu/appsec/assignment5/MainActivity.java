@@ -92,11 +92,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         settings.setJavaScriptEnabled(true);
         settings.setAllowUniversalAccessFromFileURLs(true);
 
-        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        if (!(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)) {
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-        }
+        /* removed LocationManager code
+        */
 
         setContentView(view);
         view.loadUrl(SPELL_CHECK_URL + "register");
